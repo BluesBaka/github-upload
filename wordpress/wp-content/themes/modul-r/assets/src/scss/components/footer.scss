@@ -1,0 +1,112 @@
+.site-footer {
+  margin-top: $size__padding * 1.5;
+  clear: both;
+  
+  h3,
+  p,
+  a {
+    color: $color__white;
+  }
+  
+  h3 {
+    white-space: nowrap;
+    padding-bottom: $size__padding * .25;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 1px solid transparentize($color__black, .8);
+    
+    @media #{$mq__smaller-than-tablet} {
+      padding-top: 0;
+      font-size: 21px;
+    }
+  }
+  
+  .footer-widgets {
+    padding-top: $size__padding;
+    padding-bottom: $size__padding * .5;
+    display: flex;
+    
+    @media #{$mq__smaller-than-tablet} {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    
+    ul {
+      padding: 0;
+      margin: 0;
+      ul {
+        margin-left: $size__padding-resp
+      }
+    }
+    
+    li {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      
+      a {
+        display: block;
+        @extend .ellipsis;
+        padding-bottom: $size__margin;
+      }
+      
+      .post-date {
+        font-size: 13px;
+        margin-left: $size__margin;
+        color: transparentize($color__white, .5);
+      }
+    }
+  }
+  
+  .widget {
+    flex: 1 1 0;
+    box-sizing: content-box;
+    margin-right: $size__padding * 1.5;
+    width: $size__site-width * .2;
+    
+    @media #{$mq__smaller-than-tablet} {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-bottom: $size__padding * .5;
+    }
+    
+    &:first-of-type {
+      margin-left: 0;
+    }
+    
+    &:last-of-type {
+      margin-right: 0;
+    }
+    
+    &.credits {
+      flex-grow: 2;
+      margin-right: $size__padding * 4;
+      width: inherit;
+      
+      @media #{$mq__smaller-than-tablet} {
+        padding-top: $size__padding * .5;
+        padding-bottom: 0;
+      }
+      
+      img {max-width: 300px}
+      
+    }
+    
+  }
+  
+  .footer-info {
+    background-color: $color__black;
+    padding: $size__margin 0;
+    
+    @media #{$mq__larger-than-tablet} {
+      text-align: right;
+    }
+    
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+  
+}
